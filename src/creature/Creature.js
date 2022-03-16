@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './creature.scss';
 
 const url = 'https://api.tibiadata.com/v3/creature/'
@@ -33,10 +33,10 @@ export default function Creature() {
                 <button className='creatureSearchButton' type="submit">Search</button>
             </form>
 
-            {(creature != null && creature.image_url != '') && <div className='creatureCard'>
+            {(creature !== null && creature.image_url !== '') && <div className='creatureCard'>
                 <div className='creatureTitle'>
                     <h4 className='creatureName'>{creature.name}</h4>
-                    <img src={creature.image_url} alt="Picture of a creature." />
+                    <img src={creature.image_url} alt="" />
                 </div>
                 <div className='creatureText'>
                     <p>Hitpoints: {creature.hitpoints} Experience: {creature.experience_points}</p>
