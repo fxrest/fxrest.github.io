@@ -19,11 +19,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div>
-          <h2 className='clickToShow'
-            onClick={showList}>
+          <h2 className='clickToShow' onClick={showList}>
             Complete list of creatures
-            {showCreatures && <Creatures />}
           </h2>
+          {showCreatures && <Creatures />}
         </div>
         <div>
           <h2 onClick={showForm}>Search for creature</h2>
