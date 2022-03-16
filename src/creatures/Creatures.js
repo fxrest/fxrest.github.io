@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import './creatures.scss';
 
 export default function Creatures() {
@@ -8,7 +8,6 @@ export default function Creatures() {
         const get = async () => {
             const r = await fetch("https://api.tibiadata.com/v3/creatures");
             const d = await r.json();
-            console.log(d)
             setCreatures(d.creatures.creature_list)
         }
         get()
