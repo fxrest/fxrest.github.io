@@ -16,7 +16,7 @@ export default function Creature() {
         const get = async () => {
             const response = await fetch(`${url}${creatureName.replace(/ /g, '').toLowerCase()}`);
             const d = await response.json();
-            setCreature(d.creature)
+            setCreature(d.creature);
         }
         get();
     };
@@ -25,20 +25,21 @@ export default function Creature() {
         <>
             <form onSubmit={handleSubmit}>
                 <input
+                    className='creatureNameInput'
                     type="text"
                     value={creatureName}
                     onChange={handleChange}
                 />
-                <button type="submit">Search</button>
+                <button className='creatureSearchButton' type="submit">Search</button>
             </form>
 
-            {creature != null && <div className='creatureCard'>
+            {(creature != null && creature.image_url != '') && <div className='creatureCard'>
                 <div className='creatureTitle'>
                     <h4 className='creatureName'>{creature.name}</h4>
                     <img src={creature.image_url} alt="Picture of a creature." />
                 </div>
-                <div>
-                    <p>Hitpoints: {creature.hitpoints}</p>
+                <div className='creatureText'>
+                    <p>Hitpoints: {creature.hitpoints} Experience: {creature.experience_points}</p>
                 </div>
             </div>}
         </>
