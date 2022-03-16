@@ -1,0 +1,37 @@
+html {
+  font-size: 16px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-main {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  h1{
+    color: gold;
+    margin: 0.25rem;
+  }
+}
+
+.clickToShow {
+  
+  &:hover {
+    cursor: pointer;
+    color: rgb(248, 71, 71);
+  }
+}
+
+.holder{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
