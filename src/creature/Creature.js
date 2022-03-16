@@ -8,13 +8,13 @@ export default function Creature() {
     const [creatureName, setCreatureName] = useState('')
 
     const handleChange = element => {
-        setCreatureName(element.target.value)
+        setCreatureName(element.target.value);
     }
 
     const handleSubmit = (element) => {
         element.preventDefault();
         const get = async () => {
-            const response = await fetch(`${url}${creatureName}`);
+            const response = await fetch(`${url}${creatureName.replace(/ /g, '').toLowerCase()}`);
             const d = await response.json();
             setCreature(d.creature)
         }
