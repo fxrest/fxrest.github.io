@@ -1,24 +1,32 @@
 import React, { useState, useEffect } from 'react'
 import './creatures.scss';
+import Creature from '../creature/Creature.js'
 
 export default function Creatures() {
     const [creatures, setCreatures] = useState([])
+    // const [showCreatureCard, setShowCreatureCard] = useState(false)
 
     useEffect(() => {
         const get = async () => {
-            const r = await fetch("https://api.tibiadata.com/v3/creatures");
-            const d = await r.json();
-            setCreatures(d.creatures.creature_list)
+            const response = await fetch("https://api.tibiadata.com/v3/creatures");
+            const d = await response.json();
+            if (response.ok) {
+                setCreatures(d.creatures.creature_list)
+            }
         }
         get()
     }, [])
 
+    // const handleShowCreatureCard = () => {
+    //     setShowCreatureCard(!showCreatureCard);
+    // }
+
     return (
-        <div>
-            {creatures.map((cre, index) => (
-                <div className='creatureListHolder' key={index}>
-                    {cre.name}
-                    <img src={cre.image_url} alt="" />
+        <div className='creatureListHolder'>
+            {creatures.map((creature, index) => (
+                <div className='creatureListElement' key={index}>
+                    {creature.name}
+                    <img src={creature.image_url} alt="" />
                 </div>
             ))}
         </div>
