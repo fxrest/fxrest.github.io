@@ -5,8 +5,30 @@
     flex-direction: column;
     align-items: center;
     color: black;
+    margin-top: 1rem;
+    width: 100%;
 
     .creatureTitle {
         display: flex;
     }
+}
+
+.creatureNameInput {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.creatureSearchButton{
+    border: none;
+    font-size: 1.6rem;
+    margin: 1rem;
+    background-color: rgb(255, 49, 83);
+    cursor: pointer;
+    &:active{
+        background-color: rgb(255, 96, 125);
+    }
+}
+
+img{
+    object-fit: none;
 }
