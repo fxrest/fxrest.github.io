@@ -33,13 +33,13 @@ $breakpoint-m: 768px;
 
 .creatureNameInput {
     font-size: calc(10px + 2vmin);
-    margin: 1rem;
+    margin-inline: 1vw;
 }
 
 .creatureSearchButton{
     border: none;
     font-size: calc(10px + 2vmin);
-    margin: 1rem;
+    margin-inline: 1vw;
     background-color: rgb(255, 49, 83);
     cursor: pointer;
     &:active{
