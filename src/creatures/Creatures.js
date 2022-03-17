@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Creatures.scss';
 
-export default function Creatures() {
+export default function Creatures({ select }) {
     const [creatures, setCreatures] = useState([]);
 
     useEffect(() => {
@@ -17,10 +17,10 @@ export default function Creatures() {
 
     return (
         <div className='creatureListHolder'>
-            {creatures.map((creature, index) => (
-                <div className='creatureListElement' key={index}>
-                    {creature.name}
-                    <img src={creature.image_url} alt="" />
+            {creatures.map(({ race, name, image_url }) => (
+                <div className='creatureListElement' key={race} onClick={() => select(race)}>
+                    {name}
+                    <img src={image_url} alt={race} />
                 </div>
             ))}
         </div>

@@ -8,6 +8,7 @@ import { useState } from 'react';
 function App() {
   const [showCreatures, setShowCreatures] = useState(false);
   const [showCreatureSearch, setShowCreatureSearch] = useState(false);
+  const [selected, setSelected] = useState(null);
 
   const showList = () => {
     setShowCreatures(!showCreatures);
@@ -19,6 +20,11 @@ function App() {
     showCreatures && setShowCreatures(!showCreatures);
   }
 
+  const selectAndToggle = (name) => {
+    setSelected(name)
+    showForm()
+  }
+
   return (
     <div className="App">
       <Navbar />
@@ -26,11 +32,11 @@ function App() {
         <h1>Choose one:</h1>
         <div className='holder'>
           <h2 className='clickToShow' onClick={showList}>List of creatures</h2>
-          {showCreatures && <Creatures />}
+          {showCreatures && <Creatures select={selectAndToggle} />}
         </div>
         <div className='holder'>
           <h2 className='clickToShow' onClick={showForm}>Search for creature</h2>
-          {showCreatureSearch && <Creature />}
+          {showCreatureSearch && <Creature selected={selected} />}
         </div>
       </main>
       <Footer />
