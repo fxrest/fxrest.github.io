@@ -25,7 +25,7 @@ function App() {
       <main className="App-main">
         <h1>Choose one:</h1>
         <div className='holder'>
-          <h2 className='clickToShow' onClick={showList}>Complete list of creatures</h2>
+          <h2 className='clickToShow' onClick={showList}>List of creatures</h2>
           {showCreatures && <Creatures />}
         </div>
         <div className='holder'>

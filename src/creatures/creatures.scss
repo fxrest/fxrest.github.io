@@ -1,7 +1,6 @@
 .creatureListElement {
     align-items: center;
-    border-radius: 10px;
-    background-color: #C5C6D0;
+    background-color: #DDDDDD;
     color: #232023;
     display: flex;
     justify-content: space-between;
@@ -9,10 +8,14 @@
     margin-bottom: 0.125px;
     padding: 0.25rem;
     padding-left: 0.75rem;
+
+    :last-of-type{
+        border: none;
+    }
 }
 
 .creatureListHolder {
-    background-color: white;
+    // background-color: white;
     overflow: auto;
     max-height: 40vh;
     max-width: 100%;
