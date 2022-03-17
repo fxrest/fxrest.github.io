@@ -1,7 +1,7 @@
 $breakpoint-m: 768px;
 
 .creatureCard {
-    background: #eeeeee;
+    background-color: #fdf5dddd;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -13,7 +13,7 @@ $breakpoint-m: 768px;
 
     .creatureTitle {
         display: flex;
-        background-color: #CCCCCC;
+        background-color: #5c564544;
         width: 100%;
         justify-content: center;
         align-items: center;
