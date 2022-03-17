@@ -1,4 +1,6 @@
 import './App.scss';
+import Navbar from './navbar/Navbar.js';
+import Footer from './footer/Footer.js'
 import Creatures from './creatures/Creatures.js'
 import Creature from './creature/Creature.js'
 import { useState } from 'react';
@@ -19,12 +21,11 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <main className="App-main">
-        <h1>Pick what you want to see:</h1>
+        <h1>Choose one:</h1>
         <div className='holder'>
-          <h2 className='clickToShow' onClick={showList}>
-            Complete list of creatures
-          </h2>
+          <h2 className='clickToShow' onClick={showList}>Complete list of creatures</h2>
           {showCreatures && <Creatures />}
         </div>
         <div className='holder'>
@@ -32,6 +33,7 @@ function App() {
           {showCreatureSearch && <Creature />}
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
