@@ -46,6 +46,7 @@ $breakpoint-m: 768px;
     font-size: calc(10px + 2vmin);
     margin-inline: 1vw;
     background-color: rgb(255, 49, 83);
+    padding: auto;
     height: 100%;
     cursor: pointer;
     &:active{
