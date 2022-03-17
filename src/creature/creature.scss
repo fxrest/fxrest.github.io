@@ -26,6 +26,11 @@ $breakpoint-m: 768px;
         margin-bottom: 1rem;
     }
 
+    img{
+        object-fit: none;
+        margin-inline: 1rem;
+    }
+
     @media (min-width: $breakpoint-m) {
         max-width: 50vw;
     }
@@ -48,7 +53,5 @@ $breakpoint-m: 768px;
     }
 }
 
-img{
-    object-fit: none;
-}
+
 
