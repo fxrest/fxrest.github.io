@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Creatures.scss';
 
 export default function Creatures() {
-    const [creatures, setCreatures] = useState([])
-    // const [showCreatureCard, setShowCreatureCard] = useState(false)
+    const [creatures, setCreatures] = useState([]);
 
     useEffect(() => {
         const get = async () => {
@@ -14,11 +13,7 @@ export default function Creatures() {
             }
         }
         get()
-    }, [])
-
-    // const handleShowCreatureCard = () => {
-    //     setShowCreatureCard(!showCreatureCard);
-    // }
+    }, []);
 
     return (
         <div className='creatureListHolder'>
