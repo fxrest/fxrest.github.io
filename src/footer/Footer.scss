@@ -1,8 +1,10 @@
+$breakpoint-m: 768px;
+
 .footerMain{
-    position: sticky;
-    bottom: 0;
+    // position: absolute;
+    // bottom: 0;
     box-sizing: border-box;
-    font-size: calc(0.125rem + 2vmin);
+    font-size: calc(0.5rem + 2vmin);
     padding: 0.75rem;
     width: 100%;
     text-align: center;
@@ -21,5 +23,11 @@
         color: white;
         cursor: pointer;
       }
+
+    }
+
+    @media (min-width: $breakpoint-m) {
+      position: sticky;
+      bottom: 0;
     }
   }
