@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './creatures.scss';
+import './Creatures.scss';
 
 export default function Creatures() {
     const [creatures, setCreatures] = useState([])
