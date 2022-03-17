@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './creature.scss';
+import './Creature.scss';
 
 const url = 'https://api.tibiadata.com/v3/creature/'
 
@@ -39,7 +39,11 @@ export default function Creature() {
                     <img src={creature.image_url} alt="" />
                 </div>
                 <div className='creatureText'>
-                    <p>Hitpoints: {creature.hitpoints} Experience: {creature.experience_points}</p>
+                    <p>❤️ <strong>Hitpoints:</strong> {creature.hitpoints}</p>
+                    <p>⚔️ <strong>Experience:</strong> {creature.experience_points}</p>
+                    <p>{creature.description}</p>
+                    <p>🧝🏻‍♂️ <strong>Behaviour:</strong> {creature.behaviour}</p>
+                    <p>✨ <strong>Loot:</strong> {creature.loot_list.join(', ')}</p>
                 </div>
             </div>}
         </>
