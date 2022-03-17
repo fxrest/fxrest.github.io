@@ -16,7 +16,9 @@ export default function Creature() {
         const get = async () => {
             const response = await fetch(`${url}${creatureName.replace(/ /g, '').toLowerCase()}`);
             const d = await response.json();
-            setCreature(d.creature);
+            if (response.ok) {
+                setCreature(d.creature);
+            }
         }
         get();
     };
