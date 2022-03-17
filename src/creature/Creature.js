@@ -45,7 +45,7 @@ export default function Creature() {
                     <p>⚔️ <strong>Experience:</strong> {creature.experience_points}</p>
                     <p>{creature.description}</p>
                     <p>🧝🏻‍♂️ <strong>Behaviour:</strong> {creature.behaviour}</p>
-                    <p>✨ <strong>Loot:</strong> {creature.loot_list.join(', ')}</p>
+                    <p>✨ <strong>Loot:</strong> {creature.loot_list !== null ? creature.loot_list.join(', ') : 'none.'}</p>
                 </div>
             </div>}
         </>
