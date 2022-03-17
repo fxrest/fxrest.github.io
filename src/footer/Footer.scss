@@ -1,0 +1,25 @@
+.footerMain{
+    position: sticky;
+    bottom: 0;
+    box-sizing: border-box;
+    font-size: calc(0.5rem + 2vmin);
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: gold;
+    margin-top: auto;
+    
+    span{
+        color: white;
+    }
+  
+    a{
+      text-decoration: none;
+      color: black;
+  
+      &:hover{
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }

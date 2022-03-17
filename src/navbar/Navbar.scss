@@ -1,0 +1,14 @@
+.navMain{
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    font-size: calc(2rem + 2vmin);
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    
+    span{
+        color: gold;
+    }
+}
